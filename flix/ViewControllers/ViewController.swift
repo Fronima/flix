@@ -89,17 +89,17 @@ class ViewController: UIViewController , UITableViewDataSource{
             if let error = error{
                 print(error.localizedDescription)
             }else if let data = data{
+                
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
                 let movies = dataDictionary["results"] as! [[String: Any]]
                 self.movies = movies
                 self.tableView.reloadData()
-                
+                self.activityIndicator.stopAnimating()
                 //print(movies)
             }
         }
         task.resume()
-        activityIndicator.stopAnimating()
     }
 
 

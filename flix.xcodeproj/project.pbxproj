@@ -11,6 +11,8 @@
 		5F4D3C691EEA124E32C98458 /* Pods_flix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4009C902FA339E53F740839 /* Pods_flix.framework */; };
 		609FA320E1C9748ED8BED728 /* Pods_flixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA10D101C3AA6419613F4652 /* Pods_flixTests.framework */; };
 		BD55222D202FEB5C0026DA62 /* Pods_flixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD55222E202FEB5C0026DA62 /* Pods_flixTests.framework */; };
+		BD552230203131830026DA62 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55222F203131830026DA62 /* CollectionViewController.swift */; };
+		BD552232203131A70026DA62 /* SuperheroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD552231203131A70026DA62 /* SuperheroCell.swift */; };
 		BD74728D2029067400CCDA51 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD74728C2029067400CCDA51 /* DetailViewController.swift */; };
 		BDBDE0A8201BC50700456540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBDE0A7201BC50700456540 /* AppDelegate.swift */; };
 		BDBDE0AA201BC50700456540 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBDE0A9201BC50700456540 /* ViewController.swift */; };
@@ -48,6 +50,8 @@
 		6805B2535F4D2FCD880FB592 /* Pods-flixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flixUITests/Pods-flixUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		99195327CB3C1C0096EB40AC /* Pods-flix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flix.release.xcconfig"; path = "Pods/Target Support Files/Pods-flix/Pods-flix.release.xcconfig"; sourceTree = "<group>"; };
 		BD55222E202FEB5C0026DA62 /* Pods_flixTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_flixTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD55222F203131830026DA62 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		BD552231203131A70026DA62 /* SuperheroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroCell.swift; sourceTree = "<group>"; };
 		BD74728C2029067400CCDA51 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BDBDE0A4201BC50700456540 /* flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBDE0A7201BC50700456540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 			children = (
 				BDBDE0A9201BC50700456540 /* ViewController.swift */,
 				BD74728C2029067400CCDA51 /* DetailViewController.swift */,
+				BD55222F203131830026DA62 /* CollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -144,8 +149,8 @@
 		BDAE3391202CF13200B4A652 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BDBDE0AB201BC50700456540 /* Main.storyboard */,
 				BDBDE0D8201D3FAA00456540 /* MovieCell.swift */,
+				BD552231203131A70026DA62 /* SuperheroCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				BDBDE0A7201BC50700456540 /* AppDelegate.swift */,
+				BDBDE0AB201BC50700456540 /* Main.storyboard */,
 				BDAE3390202CF11600B4A652 /* ViewControllers */,
 				BDAE3391202CF13200B4A652 /* Views */,
 				BDBDE0B1201BC50700456540 /* Assets.xcassets */,
@@ -501,8 +507,10 @@
 			files = (
 				BDBDE0AA201BC50700456540 /* ViewController.swift in Sources */,
 				BDBDE0B0201BC50700456540 /* flix.xcdatamodeld in Sources */,
+				BD552232203131A70026DA62 /* SuperheroCell.swift in Sources */,
 				BD74728D2029067400CCDA51 /* DetailViewController.swift in Sources */,
 				BDBDE0D9201D3FAA00456540 /* MovieCell.swift in Sources */,
+				BD552230203131830026DA62 /* CollectionViewController.swift in Sources */,
 				BDBDE0A8201BC50700456540 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
