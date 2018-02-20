@@ -29,6 +29,8 @@ class ViewController: UIViewController , UITableViewDataSource{
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector( refreshControlAction(_ :)), for: UIControlEvents.valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 50
     }
     
     override func didReceiveMemoryWarning() {
