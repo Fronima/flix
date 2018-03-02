@@ -14,10 +14,14 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var Title: UILabel!
     @IBOutlet weak var Info: UILabel!
     
-
+    var movie: Movie!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        Title.text = movie.title
+        Info.text = movie.overview
+        Cover.af_setImage(withURL: movie.posterUrl!)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

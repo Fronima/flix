@@ -39,7 +39,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumanji: Welcome to the Jungle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTg-nO-NiJ">
-                                                    <rect key="frame" x="116" y="8" width="612" height="17"/>
+                                                    <rect key="frame" x="116" y="8" width="290" height="17"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="sLy-3v-sdV"/>
@@ -49,7 +49,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6Jv-IC-Z9F">
-                                                    <rect key="frame" x="116" y="33" width="612" height="123"/>
+                                                    <rect key="frame" x="116" y="33" width="290" height="123"/>
                                                     <color key="backgroundColor" red="0.71447323073601365" green="0.61043350723599954" blue="0.96620899438858032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="123" id="NW5-8J-Cel"/>
@@ -222,7 +222,7 @@
             </objects>
             <point key="canvasLocation" x="-487" y="105"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Superheroes-->
         <scene sceneID="R2U-kY-MS4">
             <objects>
                 <viewController id="cKA-ht-OBS" customClass="CollectionViewController" customModule="flix" customModuleProvider="target" sceneMemberID="viewController">
@@ -234,21 +234,21 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="11" id="RYl-4C-Avi">
-                                    <size key="itemSize" width="196" height="256"/>
+                                    <size key="itemSize" width="190" height="240"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SuperHeroCell" id="jVL-ly-45Q" customClass="SuperheroCell" customModule="flix" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="196" height="256"/>
+                                        <rect key="frame" x="10" y="10" width="196" height="256"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="196" height="256"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="05r-dC-tzd">
-                                                    <rect key="frame" x="-1" y="0.0" width="197" height="256"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="196" height="256"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -273,7 +273,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IsS-7R-Cuw"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XJp-GS-iNZ"/>
+                    <navigationItem key="navigationItem" title="Superheroes" id="XJp-GS-iNZ"/>
                     <connections>
                         <outlet property="collectionView" destination="KdL-gF-RHJ" id="rKf-hy-Iwd"/>
                     </connections>
