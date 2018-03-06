@@ -234,21 +234,21 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="11" id="RYl-4C-Avi">
-                                    <size key="itemSize" width="190" height="240"/>
+                                    <size key="itemSize" width="166" height="231"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SuperHeroCell" id="jVL-ly-45Q" customClass="SuperheroCell" customModule="flix" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="196" height="256"/>
+                                        <rect key="frame" x="10" y="10" width="166" height="231"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="196" height="256"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="166" height="231"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="05r-dC-tzd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="196" height="256"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="231"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -259,7 +259,10 @@
                                             <constraint firstItem="05r-dC-tzd" firstAttribute="top" secondItem="jVL-ly-45Q" secondAttribute="top" id="PzL-Go-3NS"/>
                                             <constraint firstAttribute="trailing" secondItem="05r-dC-tzd" secondAttribute="trailing" id="heS-aD-h6L"/>
                                         </constraints>
-                                        <size key="customSize" width="196" height="256"/>
+                                        <size key="customSize" width="166" height="231"/>
+                                        <connections>
+                                            <outlet property="poster" destination="05r-dC-tzd" id="f33-Qv-WuH"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

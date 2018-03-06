@@ -67,10 +67,11 @@ class ViewController: UIViewController , UITableViewDataSource{
     }
 
     func fetchMovies() {
-        MovieApiManager().getMovie(movieType: .nowPlaying, completion:{ (movies: [Movie]?, error: Error? ) in
+        MovieApiManager().getMovie(movieType: .nowPlaying, completion:{  (movies: [Movie]?, error: Error?) in
             if let movies = movies{
                 self.movies = movies
                 self.tableView.reloadData()
+                self.activityIndicator.stopAnimating()
             }
             })
     }

@@ -18,14 +18,14 @@ class Movie {
     
     init(dictionary: [String: Any]) {
         
-        title = dictionary["title"] as String ?? "No Title"
-        let posterPath = movie["poster_path"] as! String
-        let backDropPath = movie["backdrop_path"] as! String
+        title = dictionary["title"] as? String ?? "No Title"
+        let posterPath = dictionary["poster_path"] as! String
+        let backDropPath = dictionary["backdrop_path"] as! String
         let baseUrl = "https://image.tmdb.org/t/p/w500"
         posterUrl = URL(string: baseUrl + posterPath)
         backDropUrl = URL(string: baseUrl + backDropPath)
-        overview = movie["overview"] as! String
-        releaseDate =  movie["release_date"] as? String
+        overview = dictionary["overview"] as! String
+        releaseDate =  dictionary["release_date"] as! String
     }
     
     class func movies(dictionaries: [[String: Any]]) -> [Movie]{

@@ -13,7 +13,7 @@ private let reuseIdentifier = "Cell"
 
 class CollectionViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate{
     
-    var movies: [[String : Any ]] = []
+    var movies: [Movie] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -34,28 +34,17 @@ class CollectionViewController: UIViewController , UICollectionViewDataSource, U
     }
     
     func fetchHero() {
-        // converts string to s a url
-        let url = URL(string: "https://api.themoviedb.org/3/movie/284053/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US&page=1" )!
-        // creates a url request to be sent to a server
-        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
-        //creates a session to recieve the data from the server
-        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
-        //recieves the data parses and stores it
-        let task = session.dataTask(with: request){
-            (data, response, error) in
-            if let error = error{
-                print(error.localizedDescription)
-            }else if let data = data{
-                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                
-                let movies = dataDictionary["results"] as! [[String: Any]]
+        
+        MovieApiManager().findMovie(id: 284053){ (movies: [Movie]?, error: Error?) in
+            if let movies = movies{
                 self.movies = movies
                 self.collectionView.reloadData()
-                
                 print(movies)
+            }else{
+                print(error?.localizedDescription)
             }
+            
         }
-        task.resume()
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,12 +80,10 @@ class CollectionViewController: UIViewController , UICollectionViewDataSource, U
     
         // Configure the cell
         let movie = movies[indexPath.item]
-        let posterPath = movie["poster_path"] as! String
-        let baseUrl = "https://image.tmdb.org/t/p/w500"
-        
-        let coverImageUrl = URL(string: baseUrl + posterPath)
-        
-        cell.poster.af_setImage(withURL: coverImageUrl!)
+        if let posterUrl = movie.posterUrl{
+            print(posterUrl)
+            cell.poster.af_setImage(withURL: posterUrl)
+        }
         
         return cell
     }
